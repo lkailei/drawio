@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T05:49:51.947Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="xnNcTqlYxNR_uCSJVWs0" version="16.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-31T06:11:30.529Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="FOcWPvBkO384aK4y0Nwx" version="16.5.6" type="github">
   <diagram id="YGL4_LU6Wryx0pnacia-" name="Page-1">
     <mxGraphModel dx="1550" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,7 +37,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="nmOukB2l_b2BBjUmnGJQ-13" value="&lt;span style=&quot;font-size: 13px&quot;&gt;项目计划启动(rep_wplan),&lt;br&gt;将项目划分为项目以及子项&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=13;fontStyle=0" vertex="1" parent="1">
-          <mxGeometry x="45" y="300" width="170" height="40" as="geometry" />
+          <mxGeometry x="45" y="280" width="170" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nmOukB2l_b2BBjUmnGJQ-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nmOukB2l_b2BBjUmnGJQ-16" target="nmOukB2l_b2BBjUmnGJQ-17">
           <mxGeometry relative="1" as="geometry" />
@@ -48,11 +48,44 @@
         <mxCell id="nmOukB2l_b2BBjUmnGJQ-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=13;" edge="1" parent="1" source="nmOukB2l_b2BBjUmnGJQ-17" target="nmOukB2l_b2BBjUmnGJQ-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nmOukB2l_b2BBjUmnGJQ-17" value="工程项目招标" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="85" y="540" width="90" height="20" as="geometry" />
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-17" value="工程项目招标(rep_wfruit)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="50" y="564.5" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="nmOukB2l_b2BBjUmnGJQ-19" value="工程项目合同审批" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="70" y="640" width="120" height="20" as="geometry" />
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-19" value="工程项目合同审批(rep_wcontract)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="25" y="820" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-32" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="160" y="630" width="560" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-27" value="select rep_wfruit.rpe_wfruit_id,rep_wfruit.dept_id,rep_w.pro_name2,&lt;br&gt;substr(rep_w.memo,(instr(rep_w.memo,&#39;修理内容: &#39;)+ 5) detail 0 from rep_wfruit left join rep_w &lt;br&gt;on rep_w.rep_w_id=rep_wfruit_s_id where wfruit.rep_wfruit=?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=13;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-32">
+          <mxGeometry width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-28" value="insert into rep_wcontract(type_entry,s_id,dept_id,contract_name,detail0,auditing,editor,&lt;br&gt;pro_date,rep_wcontract_id,start_auditing,end_auditing,check_auditing,detail) values(&#39;3&#39;,?,?,?)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=13;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-32">
+          <mxGeometry y="60" width="550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-31" value="select rep_wfruit.rpe_wfruit_id,rep_wfruit.dept_id,rep_w.pro_name2,&lt;br&gt;substr(rep_w.memo,(instr(rep_w.memo,&#39;修理内容: &#39;)+ 5) detail 0 from rep_wfruit left join rep_w &lt;br&gt;on rep_w.rep_w_id=rep_wfruit_s_id where wfruit.rep_wfruit=?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;fontSize=13;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-32">
+          <mxGeometry width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-33" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="210" y="480" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-25" value="select dept_id,rep_w_id from rep_w where rep_w_id =?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=13;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-33">
+          <mxGeometry width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-26" value="insert into rep_wfruit(type_entry,dept_id,s_id) values(&#39;3&#39;,?,?)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=13;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-33">
+          <mxGeometry y="30" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-34" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="180" y="350" width="550" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-23" value="slect rep_plan_id,dept_id,memo,pro_code,pro_name,asset_code,pro_money,from rep_wplan" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=13;fontColor=#333333;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-34">
+          <mxGeometry width="550" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-24" value="insert ino rep_w (s_id,dept_id,memo,rpe_wid,editor,pro_date,&lt;br&gt;auditing_type,pro_code,pro_name,asset_code,pro_money)values()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontSize=13;fontColor=#333333;" vertex="1" parent="nmOukB2l_b2BBjUmnGJQ-34">
+          <mxGeometry y="30" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nmOukB2l_b2BBjUmnGJQ-35" value="&lt;div style=&quot;text-align: justify&quot;&gt;模块数据获取：&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;select&amp;nbsp;&amp;nbsp;&lt;span&gt;* from&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span&gt;rep_wcontract&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span&gt;	&lt;/span&gt;left join rep_wfruit on&amp;nbsp;&lt;span&gt;rep_wcontact.s_id = rep_wfruit.rep_wfruit_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;left join sys_dept on rep_wcontract_dept_id=sys_dept.dept_id&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;left join (select substr(rep_wfruit.memo,(instr(rep_wfruit.memo,&#39;付款方式：&#39;)+5)) detailf,rep_wfruit_id fid from rep_wfruit) fk&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span&gt;	&lt;/span&gt;left join rep_w on&amp;nbsp;&lt;span&gt;rep_wfruit.s_id = rep_w.rep_w_id&amp;nbsp; where rep_wcontract.type_entry=3&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span&gt;order by rep_wcontract.pro_date desc&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="70" y="860" width="720" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
